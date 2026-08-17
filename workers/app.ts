@@ -1,5 +1,9 @@
 import { createRequestHandler } from "react-router";
 
+export interface Env {
+  projectlog: D1Database;
+}
+
 const requestHandler = createRequestHandler(
   () => import("virtual:react-router/server-build"),
   import.meta.env.MODE,
